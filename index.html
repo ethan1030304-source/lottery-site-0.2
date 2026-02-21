@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>銷售系統</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="control-panel">
+    <h2>銷售系統</h2>
+
+    開獎日期：
+    <input type="text" id="drawDateInput" placeholder="請輸入開獎日期">
+
+    張數 (最多10)：
+    <input type="number" id="ticketCount" min="1" max="10" value="1">
+
+    每張幾組 (1~5)：
+    <input type="number" id="groupCount" min="1" max="5" value="1">
+
+    <br>
+
+    <button onclick="generateTickets(false)">自選</button>
+    <button onclick="generateTickets(true)">隨機快選</button>
+    <button onclick="window.print()">列印</button>
+</div>
+
+<div id="printArea"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
